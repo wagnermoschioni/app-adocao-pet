@@ -21,7 +21,6 @@ public class ListaPetsServlet extends HttpServlet {
 			throws ServletException, IOException {
 
 		Banco banco = new Banco();
-
 		List<Pet> lista = banco.getLista();
 
 		request.setAttribute("pets", lista);

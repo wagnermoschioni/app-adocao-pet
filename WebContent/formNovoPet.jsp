@@ -6,10 +6,10 @@
 </head>
 <body>
 
-	<form action="/adocao/novoPet" method="post">
+	<form action="/adocao/novoPet">
 
 		Nome: <input type="text" name="nome"> Data Nascimento: <input
-			type="text" name="nome"> <input type="submit" value="Gravar">
+			type="text" name="data"> <input type="submit" value="Gravar">
 	</form>
 </body>
 </html>
