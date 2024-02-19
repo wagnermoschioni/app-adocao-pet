@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -29,6 +30,7 @@ public class NovoPetServlet extends HttpServlet {
 		
 		banco.adiciona(pet);
 		
+		/*
 		PrintWriter writer = response.getWriter();
 
 		writer.println("<html>");
@@ -36,8 +38,11 @@ public class NovoPetServlet extends HttpServlet {
 		writer.println("Cadastro do pet " + nomePet + " efetuado com sucesso");
 		writer.println("</body>");
 		writer.println("</html>");
+		*/
 		
-		
+		request.setAttribute("nome", pet.getNome());
+		RequestDispatcher dispatcher = request.getRequestDispatcher("novoPetCadastrado.jsp");
+		dispatcher.forward(request, response);
 			
 	}
 
