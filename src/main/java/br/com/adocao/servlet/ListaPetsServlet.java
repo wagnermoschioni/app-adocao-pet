@@ -1,9 +1,9 @@
 package br.com.adocao.servlet;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.List;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -24,20 +24,11 @@ public class ListaPetsServlet extends HttpServlet {
 
 		List<Pet> lista = banco.getLista();
 
-		PrintWriter writer = response.getWriter();
-
-		writer.println("<html>");
-		writer.println("<body>");
-		writer.println("<ul>");
-
-		for (Pet pet : lista) {
-			writer.println("<li>" + pet.getNome() + "</li>");
-		}
+		request.setAttribute("pets", lista);
+		RequestDispatcher dispatcher = request.getRequestDispatcher("listaPets.jsp");
+		dispatcher.forward(request, response);
 		
-		writer.println("</ul>");
-		writer.println("</body>");
-		writer.println("</html>");
-
+			
 	}
 
 }

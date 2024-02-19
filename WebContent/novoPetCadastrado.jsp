@@ -1,5 +1,5 @@
 <% 
-String nomePet = request.getParameter("nome"); 
+String nomePet = (String) request.getAttribute("nome"); 
 %>
 
 <!DOCTYPE html>
