@@ -7,7 +7,7 @@ import java.util.List;
 public class Banco {
 
 	private static List<Pet> lista = new ArrayList<Pet>();
-	private static Integer seqId = 1;
+	private static Integer seqId = 100;
 
 	public void adiciona(Pet pet) {
 		pet.setId(seqId);
