@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import br.com.adocao.dao.PetDAO;
 import br.com.adocao.model.Banco;
 import br.com.adocao.model.Pet;
 
@@ -20,8 +21,10 @@ public class ListaPetsServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		Banco banco = new Banco();
-		List<Pet> lista = banco.getLista();
+//		Banco banco = new Banco();
+//		List<Pet> lista = banco.getLista();
+		
+		List<Pet> lista = new PetDAO().listarPets();
 
 		request.setAttribute("pets", lista);
 		RequestDispatcher dispatcher = request.getRequestDispatcher("listaPets.jsp");
