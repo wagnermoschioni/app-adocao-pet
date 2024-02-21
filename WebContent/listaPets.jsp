@@ -45,7 +45,7 @@
 						<tr>
 							<th>Cód.</th>
 							<th>Nome</th>
-							
+							<th>Raça</th>
 							<th>Data Nasc.</th>
 							<th></th>
 							<th></th>
@@ -58,7 +58,8 @@
 							<tr>
 
 								<td>${pet.id}</td>
-								<td>${ pet.nome }</td>								
+								<td>${ pet.nome }</td>
+								<td>${ pet.raca }</td>								
 								<td><fmt:formatDate value="${ pet.dataNascimento }"
 										pattern="dd/MM/yyyy" /></td>
 								<td><a href="#" title="Imagem do pet"><i

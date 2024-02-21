@@ -27,6 +27,10 @@
 					<div class="inputbox">
 						<input type="text" name="nome" value="${pet.nome}"><label for="nome">Nome</label>
 					</div>
+					
+					<div class="inputbox">
+						<input type="text" name="raca" value="${pet.raca}"><label for="nome">Raça</label>
+					</div>
 
 					<div class="inputbox">
 						<input type="text" name="data" value="<fmt:formatDate value="${ pet.dataNascimento }" pattern="dd/MM/yyyy" />"><label for="nome">Data

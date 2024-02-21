@@ -25,6 +25,10 @@
 					<div class="inputbox">
 						<input type="text" name="nome"><label for="nome">Nome</label>
 					</div>
+					
+					<div class="inputbox">
+						<input type="text" name="raca"><label for="raca">Raça</label>
+					</div>
 
 					<div class="inputbox">
 						<input type="text" name="data"><label for="nome">Data
