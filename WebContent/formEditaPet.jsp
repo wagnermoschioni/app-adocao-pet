@@ -22,7 +22,7 @@
 		<div class="form-box">
 			<div class="form-value">
 				<form id="form-cadastro" action="/adocao/alteraPet">
-					<h2>Cadastro</h2>
+					<h2>Editar</h2>
 					<input type="hidden" name="id" value="${pet.id}">
 					<div class="inputbox">
 						<input type="text" name="nome" value="${pet.nome}"><label for="nome">Nome</label>
