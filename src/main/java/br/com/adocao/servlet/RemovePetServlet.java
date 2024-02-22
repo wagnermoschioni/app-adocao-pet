@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import br.com.adocao.model.Banco;
+import br.com.adocao.dao.PetDAO;
 
 
 @WebServlet("/removePet")
@@ -17,14 +17,10 @@ public class RemovePetServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
-		String idParam = request.getParameter("id");
-		
-		Integer id = Integer.parseInt(idParam);
-		
-		Banco banco = new Banco();
-		
-		banco.removePet(id);
-		
+		String idParam = request.getParameter("id");		
+		Integer id = Integer.parseInt(idParam);		
+
+		new PetDAO().removerPet(id);
 		response.sendRedirect("listaPets");
 	}
 

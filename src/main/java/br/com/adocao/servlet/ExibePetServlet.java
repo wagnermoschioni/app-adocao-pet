@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import br.com.adocao.dao.PetDAO;
 import br.com.adocao.model.Banco;
 import br.com.adocao.model.Pet;
 
@@ -20,13 +21,10 @@ public class ExibePetServlet extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		String idParam = request.getParameter("id");
-		
+		String idParam = request.getParameter("id");		
 		Integer id = Integer.parseInt(idParam);
-		
-		Banco banco = new Banco();
-		
-		Pet pet = banco.buscarPet(id);
+
+		Pet pet = new PetDAO().buscarPet(id);
 		
 		request.setAttribute("pet", pet);
 		RequestDispatcher dispatcher = request.getRequestDispatcher("formEditaPet.jsp");

@@ -29,18 +29,16 @@
 
 		</div>
 	</c:if>
-	
-	
+
+
 	<c:if test="${ not empty pets }">
-	
 		<main class="table">
-		<section class="table_header">
+			<section class="table_header">
 				<h1>LISTA DE PETS</h1>
 				<h3>Total: ${pets.size()}</h3>
 			</section>
-			
 			<section class="table_body">
-					<table>
+				<table>
 					<thead>
 						<tr>
 							<th>Cód.</th>
@@ -53,45 +51,32 @@
 						</tr>
 					</thead>
 					<tbody>
-
 						<c:forEach items="${pets}" var="pet">
 							<tr>
-
 								<td>${pet.id}</td>
 								<td>${ pet.nome }</td>
-								<td>${ pet.raca }</td>								
+								<td>${ pet.raca }</td>
 								<td><fmt:formatDate value="${ pet.dataNascimento }"
 										pattern="dd/MM/yyyy" /></td>
 								<td><a href="#" title="Imagem do pet"><i
 										class="bi bi-camera-fill foto-pet"></i></a></td>
-								<td><a href="/adocao/exibePet?id=${pet.id}" title="Editar"><i
-										class="bi bi-pencil-square editar-icon"></i></a></td>
-								<td><a href="/adocao/removePet?id=${pet.id}"
+								<td><a href="/adocao/entrada?acao=ExibePet&id=${pet.id}"
+									title="Editar"><i class="bi bi-pencil-square editar-icon"></i></a></td>
+								<td><a href="/adocao/entrada?acao=RemovePet&id=${pet.id}"
 									title="Excluir"><i class="bi bi-x-circle excluir-icon"></i></a></td>
-
-
 							</tr>
 						</c:forEach>
-
 					</tbody>
-					
-					
-					
-					</table>
-			
+				</table>
 			</section>
-		
 		</main>
-	
-	
-	
 	</c:if>
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
 	<!-- 
 	<ul>
 		<c:forEach items="${pets}" var="pet">		

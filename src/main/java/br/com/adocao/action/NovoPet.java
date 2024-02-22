@@ -1,4 +1,4 @@
-package br.com.adocao.servlet;
+package br.com.adocao.action;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -6,21 +6,16 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import br.com.adocao.dao.PetDAO;
 import br.com.adocao.model.Pet;
 
-@WebServlet("/novoPet")
-public class NovoPetServlet extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-
-	protected void service(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-
+public class NovoPet {
+	
+	public String executa(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
 		String nomePet = request.getParameter("nome");		
 		String dataParam = request.getParameter("data");	
 		String racaParam = request.getParameter("raca");
@@ -40,8 +35,11 @@ public class NovoPetServlet extends HttpServlet {
 	    
 		new PetDAO().gravarPet(pet);			
 
-		response.sendRedirect("listaPets");
-			
+    	//response.sendRedirect("entrada?acao=ListaPets");
+    	
+    	return "redirect:entrada?acao=ListaPets";
+		
+		
 	}
 
 }

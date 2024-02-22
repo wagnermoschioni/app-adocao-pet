@@ -19,9 +19,9 @@
 
 		<div class="form-box">
 			<div class="form-value">
-				<form id="form-cadastro" action="/adocao/novoPet">
+				<form id="form-cadastro" action="/adocao/entrada">
 					<h2>Cadastro</h2>
-
+					<input type="hidden" name="acao" value="NovoPet">
 					<div class="inputbox">
 						<input type="text" name="nome"><label for="nome">Nome</label>
 					</div>

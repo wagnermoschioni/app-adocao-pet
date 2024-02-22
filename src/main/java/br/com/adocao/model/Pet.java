@@ -6,6 +6,7 @@ public class Pet {
 
 	private Integer id;
 	private String nome;
+	private String raca;
 	private Date dataNascimento;
 	
 	public Integer getId() {
@@ -21,6 +22,15 @@ public class Pet {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
+	
+	public String getRaca() {
+		return raca;
+	}
+	
+	public void setRaca(String raca) {
+		this.raca = raca;
+	}
+		
 	public Date getDataNascimento() {
 		return dataNascimento;
 	}
