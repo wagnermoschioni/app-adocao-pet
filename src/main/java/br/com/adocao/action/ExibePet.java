@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import br.com.adocao.dao.PetDAO;
 import br.com.adocao.model.Pet;
 
-public class ExibePet {
+public class ExibePet implements Acao {
 	
 	public String executa(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		

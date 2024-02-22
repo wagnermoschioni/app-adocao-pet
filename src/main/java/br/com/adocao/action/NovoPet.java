@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import br.com.adocao.dao.PetDAO;
 import br.com.adocao.model.Pet;
 
-public class NovoPet {
+public class NovoPet implements Acao {
 	
 	public String executa(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		

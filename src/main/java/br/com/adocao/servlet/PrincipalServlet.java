@@ -9,12 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import br.com.adocao.action.AlteraPet;
-import br.com.adocao.action.ExibePet;
-import br.com.adocao.action.ListaPets;
-import br.com.adocao.action.NovoPet;
-import br.com.adocao.action.RemovePet;
-
+import br.com.adocao.action.Acao;
 
 @WebServlet("/entrada")
 public class PrincipalServlet extends HttpServlet {
@@ -25,36 +20,22 @@ public class PrincipalServlet extends HttpServlet {
 
 		String paramAcao = request.getParameter("acao");
 		String nomeAcaoExecutar = "";
+		String classeAcao = "br.com.adocao.action." + paramAcao;
 		
-		if (paramAcao.equals("ListaPets")) {
-			ListaPets acao = new ListaPets();
-			nomeAcaoExecutar = acao.executa(request, response);
-		}
 		
-		if (paramAcao.equals("RemovePet")) {			
-			RemovePet acao = new RemovePet();
-			nomeAcaoExecutar = acao.executa(request, response);
-		}
-		
-		if (paramAcao.equals("AlteraPet")) {
-			AlteraPet acao = new AlteraPet();
-			nomeAcaoExecutar =  acao.executa(request, response);
-		}
-		if (paramAcao.equals("ExibePet")) {			
-			ExibePet acao = new ExibePet();
-			nomeAcaoExecutar = acao.executa(request, response);
-		}
-		
-		if (paramAcao.equals("NovoPet")) {			
-			NovoPet acao = new NovoPet();
-			nomeAcaoExecutar = acao.executa(request, response);
-		}	
-			
+		try {
+			Class classe = Class.forName(classeAcao); //carregar a classe com o nome			
+			Acao obj = (Acao) classe.newInstance();
+			nomeAcaoExecutar = obj.executa(request, response);
+		} catch (ClassNotFoundException | InstantiationException | IllegalAccessException e)   {
+			throw new ServletException();
+		} 		
+					
 		String endereco = 	nomeAcaoExecutar.split(":")[1];
 		
 		
 		if (nomeAcaoExecutar.split(":")[0].equals("forward")) {
-			RequestDispatcher dispatcher = request.getRequestDispatcher(endereco);
+			RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/jsp/" + endereco);
 			dispatcher.forward(request, response);
 				
 		} else {
