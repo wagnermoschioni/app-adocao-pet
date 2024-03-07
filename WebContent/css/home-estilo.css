@@ -1,0 +1,182 @@
+:root {
+	--orangepet: rgb(255, 197, 89);
+	--browncacau: #4E3629;
+	--greensea: #008289;
+	--gray: #c0c0c0;
+	--azulescuro: #003366;		
+	
+}
+
+* {	
+	font-family: 'Poppins';
+    margin: 0;
+    padding: 0;
+}
+
+
+/*FORM NOVO PET*/
+
+body {
+	 background-color: var(--greensea);
+    color: aliceblue;   
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+a {
+    color: aliceblue;
+}
+
+a:hover {
+    color: var(--orangepet);
+    transition: 0.3s all;
+}
+
+.inscricao {
+    border: 2px solid var(--orangepet);
+    padding: 8px;
+    border-radius: 20px;
+}
+
+.inscricao:hover {
+    background-color: var(--orangepet);
+    color: aliceblue;
+}
+
+li {
+    display: inline-block;
+    margin: 20px;
+}
+
+#title {
+    line-height: 14px;
+}
+
+h1 {
+    font-weight: 500;
+}
+
+aside {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    margin-top: 45px;
+    gap: 135px;
+}
+
+h2 {
+    font-size: 2em;
+    color: var(--orangepet);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+span {
+    color: var(--orangepet);
+}
+
+p {
+    line-height: 20px;
+    max-width: 500px;
+    font-style: inherit;
+}
+
+article img {
+    width: 420px;
+    border-radius: 20%;
+    opacity: 0.9;
+    
+}
+
+.btn-op {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.btn-op button {
+	height: 50px;
+   	width: 50%;
+    background-color: #fff;
+    color: var(--greensea);
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 20px;
+    border: none;
+    font-size: 15px;
+}
+
+.btn-op button:hover {	
+    background-color: var(--greensea);
+    color: #fff;   
+    border: 1px solid #fff;
+    transform: scale(1.04);
+    transition: .4s;
+}
+
+button {
+    width: 75%;
+    height: 40px;
+    border-radius: 40px;
+    background: var(--orangepet);;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    font-size: 1em;
+    font-weight: 600;
+    margin-top: 15px;
+    
+}
+
+/*FINAL FORM NOVO PET*/
+
+
+
+@media (max-width: 980px)  {
+
+	section {   
+    background: var(--greensea);
+   
+}
+
+	.form-box {
+    position: relative;
+    width: 80%;
+    height: 450px;
+    background-color: rgba(255, 235, 200, 0.336);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgba(255,235,200, 0.56);
+    border-radius: 20px;
+    backdrop-filter: blur(2px);
+
+}
+
+.inputbox {
+   width: 90%;
+}
+   
+	
+	
+}

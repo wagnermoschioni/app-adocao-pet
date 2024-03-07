@@ -1,7 +1,6 @@
 package br.com.adocao.action;
 
 import java.io.IOException;
-import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -18,8 +17,7 @@ public class Login implements Acao {
 			throws ServletException, IOException {
 		
 		String login = request.getParameter("login");
-		String senha = request.getParameter("senha");
-		
+		String senha = request.getParameter("senha");		
 			
 		Usuario usuario = new UsuarioDAO().existeUsuario(login, senha);
 		
@@ -31,7 +29,7 @@ public class Login implements Acao {
 			return "redirect:entrada?acao=LoginForm";
 		}
 		
-		return "redirect:entrada?acao=ListaPets";
+		return "redirect:entrada?acao=Home";
 	}
 
 }

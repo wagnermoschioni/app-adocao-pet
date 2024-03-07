@@ -20,8 +20,11 @@
 <link rel="icon" href="img/favicon.ico" type="image/x-icon">
 </head>
 <body class="body-lista">
+
+	<!-- 
      <h3>Ola, ${usuarioLogado.login}</h3>
      <h3><a href="entrada?acao=Logout">Sair</a></h3>
+      -->
 	<c:if test="${ empty pets }">
 		<div class="sem-pet">
 			<!-- <img src="img/dog-adoteme.jpg" alt=""> -->
