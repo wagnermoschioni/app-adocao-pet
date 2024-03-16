@@ -15,47 +15,48 @@
 </head>
 <body>
 
-	
-
-		<header>
+	<header>
 		<div id="title">
 			<h1>
 				Pet <span>Adoção <ion-icon name="paw-outline"></ion-icon></span>
 			</h1>
 		</div>
-		
-		
+
 		<ul>
-			<a href="#" class="inscricao"><li>Bem-vindo, <b>${usuarioLogado.login}</b></li></a>
+			<a href="#"><li>Bem-vindo, <b>${usuarioLogado.login}</b></li></a>
 			<a href="entrada?acao=Logout" class="inscricao"><li>Sair</li></a>
-			
+
 		</ul>
-		 
+
 	</header>
-	
+
 	<main>
-	
-	<aside>
-		<h2>
+
+		<aside>
+			<h2>
 				<span>A cada lar encontrado,</span>
 			</h2>
-			<h2>um novo animalzinho <span>feliz</span>!</h2>
-			
+			<h2>
+				um novo animalzinho <span>feliz</span>!
+			</h2>
+
 			<div class="btn-op">
-			<button
-						onclick="window.location.href='/adocao/entrada?acao=ListaPets'">VER PETS</button>
-			<button class="btn-opcoes"
-						onclick="window.location.href='/adocao/entrada?acao=NovoPetForm'">CADASTRAR</button>
-			
-				</div>
-	</aside>
-	
-	<article>
+				<button class="btn-opcoes"
+					onclick="window.location.href='/adocao/entrada?acao=ListaPets'">VER
+					PETS</button>
+				<button class="btn-opcoes"
+					onclick="window.location.href='/adocao/entrada?acao=NovoPetForm'">CADASTRAR</button>
+				<button class="btn-opcoes"
+					onclick="#">ABRIGOS</button>
+			</div>
+		</aside>
+
+		<article>
 			<img src="img/cat-dog-2.webp" alt="Dog Cat">
 		</article>
-	
-	</main>	
-	
+
+	</main>
+
 	<script type="module"
 		src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 	<script nomodule
