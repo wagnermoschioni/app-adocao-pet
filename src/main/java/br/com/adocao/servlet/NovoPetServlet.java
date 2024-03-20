@@ -24,6 +24,9 @@ public class NovoPetServlet extends HttpServlet {
 		String nomePet = request.getParameter("nome");		
 		String dataParam = request.getParameter("data");	
 		String racaParam = request.getParameter("raca");
+		String isVacinadoParam = request.getParameter("vacinado");
+		
+		boolean isVacinado = Boolean.parseBoolean(isVacinadoParam);
 		
 		Date dataNascimento = null;
 		try {
@@ -37,6 +40,7 @@ public class NovoPetServlet extends HttpServlet {
 		pet.setNome(nomePet);
 	    pet.setDataNascimento(dataNascimento);
 	    pet.setRaca(racaParam);
+	    pet.setVacinado(isVacinado);
 	    
 		new PetDAO().gravarPet(pet);			
 

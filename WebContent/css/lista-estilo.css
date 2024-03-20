@@ -1,9 +1,8 @@
 :root {
 	--orangepet: rgb(255, 197, 89);
-	--browncacau: #4E3629;
 	--greensea: #008289;
-	--gray: #c0c0c0;
 	--azulescuro: #003366;
+	--purple-base: #51009c;
 }
 
 * {
@@ -13,7 +12,7 @@
 
 body {
 	background-color: var(--greensea);
-	font-family: 'Poppins';
+	font-family: 'Montserrat';
 	height: 100vh;
 }
 
@@ -32,13 +31,13 @@ input:focus {
 
 .body-lista h3 {
 	color: #fff;
-	
 }
 
 .body-lista a {
 	text-decoration: nome;
 	color: orange;
 }
+
 main.table {
 	width: 75vw;
 	height: 90vh;
@@ -51,7 +50,6 @@ main.table {
 table {
 	width: 100%;
 }
-
 
 .table_header {
 	width: 100%;
@@ -87,15 +85,11 @@ table, th, td {
 	border-collapse: collapse;
 }
 
-.table_header h3 {
-	right: 20px;
-}
-
 thead th {
 	position: sticky;
 	top: 0;
 	left: 0;
-	background-color: var(--greensea);
+	background-color: var(--purple-base);
 	color: #fff;
 }
 
@@ -117,7 +111,6 @@ i {
 
 tbody tr {
 	height: 5px;
-
 }
 
 tbody td i.foto-pet {
@@ -133,7 +126,6 @@ tbody tr:nth-child(even) {
 tbody tr:hover {
 	background-color: #fff6;
 }
-
 
 .sem-pet {
 	display: flex;
@@ -157,7 +149,6 @@ tbody tr:hover {
 	color: #fff;
 }
 
-
 .btn {
 	width: 75vw;
 	text-align: center;
@@ -176,27 +167,42 @@ tbody tr:hover {
 	cursor: pointer;
 }
 
+@media ( max-width : 980px) {
+	main.table tr td {
+		display: grid;
+	}
+	
+	tbody td:nth-child(1),
+	tbody td:nth-child(2),
+	tbody td:nth-child(3),
+	tbody td:nth-child(4) {
+		text-align: center;
+	}
+	
+	tbody td:nth-child(1)::before,
+	tbody td:nth-child(2)::before,
+	tbody td:nth-child(3)::before,
+	tbody td:nth-child(4)::before {
+		content: attr(data-cell);
+		font-weight: bold;
+	}
+	
+	.table_header h1,
+	.table_header h3 {
+	font-size: 17px;	
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	}
+	
+	.table_header h3 {
+	display: none;
+	}
+	
+	.table_header {
+	justify-content: center;
+	}
+	
+	
+	table thead {
+		display: none;
+	}
+}

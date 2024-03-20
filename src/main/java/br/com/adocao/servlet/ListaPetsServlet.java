@@ -11,7 +11,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import br.com.adocao.dao.PetDAO;
-import br.com.adocao.model.Banco;
 import br.com.adocao.model.Pet;
 
 @WebServlet("/listaPets")

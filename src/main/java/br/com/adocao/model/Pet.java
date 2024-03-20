@@ -8,6 +8,7 @@ public class Pet {
 	private String nome;
 	private String raca;
 	private Date dataNascimento;
+	private boolean vacinado = false;
 	
 	public Integer getId() {
 		return id;
@@ -38,6 +39,13 @@ public class Pet {
 		this.dataNascimento = dataNascimento;
 	}
 	
+	public void setVacinado(boolean vacinado) {
+		this.vacinado = vacinado;
+	}
+	
+	public boolean vacinado() {
+		return vacinado;
+	}
 	
 	
 }

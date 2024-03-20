@@ -1,10 +1,8 @@
 :root {
 	--orangepet: rgb(255, 197, 89);
-	--browncacau: #4E3629;
 	--greensea: #008289;
-	--gray: #c0c0c0;
 	--azulescuro: #003366;	
-	--teste: #2e5c5c;	
+	--purple: #51009c;
 	
 }
 
@@ -42,21 +40,17 @@ a:hover {
     transition: 0.3s all;
 }
 
-.inscricao {
-    border: 2px solid var(--orangepet);   
+.inscricao {	    
     padding: 4px;
     border-radius: 20px;
     font-size: 1.1rem;
+    font-weight: 600;
 }
 
 .inscricao li {
     font-size: 0.8rem;
 }
 
-.inscricao:hover {
-    background-color: var(--orangepet);
-    color: aliceblue;
-}
 
 li {
     display: inline-block;
@@ -123,7 +117,7 @@ article img {
 	height: 50px;
    	width: 45%;
     background-color: rgb(240, 240, 240);
-    color: var(--teste);
+    color: var(--greensea);
     font-weight: bold;
     cursor: pointer;
     margin-top: 20px;

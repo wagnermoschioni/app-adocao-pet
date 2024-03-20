@@ -23,7 +23,7 @@
 		</div>
 
 		<ul>
-			<a href="#"><li>Bem-vindo, <b>${usuarioLogado.login}</b></li></a>
+			<li>Bem-vindo, <b>${usuarioLogado.login}</b></li>
 			<a href="entrada?acao=Logout" class="inscricao"><li>Sair</li></a>
 
 		</ul>
@@ -41,13 +41,10 @@
 			</h2>
 
 			<div class="btn-op">
-				<button class="btn-opcoes"
-					onclick="window.location.href='/adocao/entrada?acao=ListaPets'">VER
+				<button onclick="window.location.href='/adocao/entrada?acao=ListaPets'">VER
 					PETS</button>
-				<button class="btn-opcoes"
-					onclick="window.location.href='/adocao/entrada?acao=NovoPetForm'">CADASTRAR</button>
-				<button class="btn-opcoes"
-					onclick="#">ABRIGOS</button>
+				<button onclick="window.location.href='/adocao/entrada?acao=NovoPetForm'">CADASTRAR</button>
+				<button onclick="window.location.href='/adocao/entrada?acao=Abrigo'">ABRIGOS</button>
 			</div>
 		</aside>
 

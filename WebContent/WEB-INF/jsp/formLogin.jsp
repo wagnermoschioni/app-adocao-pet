@@ -3,7 +3,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>LOG IN</title>
-<link rel="stylesheet" href="css/formulario-estilo.css">
+<link rel="stylesheet" href="css/login-estilo.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link
@@ -14,35 +14,51 @@
 	rel="stylesheet">
 </head>
 <body>
+ 
+	<main id="container">
+        <form id="login-form">
+            <div id="form-header">
+                <h1>Faça seu login</h1>
+               
+            </div>
+            <input type="hidden" name="acao" value="Login">
+           <!--
+            <div id="social-media">
+                <a href="">
+                    <i class="fa-solid fa-dog"></i>
+                </a>               
+                <a href="">
+                    <i class="fa-solid fa-bone"></i>
+                </a>
+            </div>
+-->
+            <div id="inputs">
+                <div class="input-box">
+                    <label for="name">Login
+                        <div class="input-field">
+                            <i class="fa-solid fa-paw"></i>
+                            <input type="text" id="login" name="login">
+                        </div>
+                    </label>
+                </div>
 
-	<section>
+                <div class="input-box">
+                    <label for="name">Senha
+                        <div class="input-field">
+                            <i class="fa-solid fa-paw"></i>
+                            <input type="password" id="senha" name="senha">
+                        </div>
+                    </label>
+                </div>
 
-		<div class="form-box">
-			<div class="form-value">
-				<form action="/adocao/entrada">
-					<h2>Login</h2>
-					<input type="hidden" name="acao" value="Login"> 
-					<div class="inputbox">
-						<input type="text" name="login"><label for="login">Login</label>
-					</div>
-					
-					<div class="inputbox">
-						<input type="password" name="senha"><label for="senha">Senha</label>
-					</div>
+               
+            </div>
 
-					
-					<button type="submit">LOG IN</button>
+            <button type="submit" id="login-button">Login</button>
 
-				</form>
-				<!-- 
-				<button onclick="history.go(-1)">Cancelar</button>
-					 -->
-			</div>
-		</div>
-	</section>
-	<script type="module"
-		src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-	<script nomodule
-		src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+        </form>
+    </main>   
+		
 </body>
 </html>

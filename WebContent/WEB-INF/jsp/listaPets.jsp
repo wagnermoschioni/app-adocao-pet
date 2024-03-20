@@ -38,14 +38,14 @@
 	<c:if test="${ not empty pets }">
 		<main class="table">
 			<section class="table_header">
-				<h1>LISTA DE PETS</h1>
+				<h1>Pets disponíveis</h1>
 				<h3>Total: ${pets.size()}</h3>
 			</section>
 			<section class="table_body">
 				<table>
 					<thead>
 						<tr>
-							<th>Cód.</th>
+							<th>Código</th>
 							<th>Nome</th>
 							<th>Raça</th>
 							<th>Data Nasc.</th>
@@ -57,10 +57,10 @@
 					<tbody>
 						<c:forEach items="${pets}" var="pet">
 							<tr>
-								<td>${pet.id}</td>
-								<td>${ pet.nome }</td>
-								<td>${ pet.raca }</td>
-								<td><fmt:formatDate value="${ pet.dataNascimento }"
+								<td data-cell="Codigo">${pet.id}</td>
+								<td data-cell="Nome">${ pet.nome }</td>
+								<td data-cell="Raça">${ pet.raca }</td>
+								<td data-cell="Data Nasc."><fmt:formatDate value="${ pet.dataNascimento }"
 										pattern="dd/MM/yyyy" /></td>
 								<td><a href="#" title="Imagem do pet"><i
 										class="bi bi-camera-fill foto-pet"></i></a></td>

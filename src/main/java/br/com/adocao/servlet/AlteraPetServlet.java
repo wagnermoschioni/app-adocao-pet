@@ -12,8 +12,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import br.com.adocao.dao.PetDAO;
-import br.com.adocao.model.Banco;
-import br.com.adocao.model.Pet;
 
 @WebServlet("/alteraPet")
 public class AlteraPetServlet extends HttpServlet {
@@ -36,13 +34,11 @@ public class AlteraPetServlet extends HttpServlet {
 		} catch (ParseException e) {
 			throw new ServletException(e);
 			
-		}
-		
+		}		
 
 		PetDAO dao = new PetDAO();
 		
-		dao.atualizarPet(idParam, nome, raca, dataNascimento);
-		
+		dao.atualizarPet(idParam, nome, raca, dataNascimento);		
 		
 		response.sendRedirect("listaPets");
 

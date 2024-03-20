@@ -1,13 +1,13 @@
 :root {
-    --color-white: #ffffffec;
-    --bluedark: rgb(0, 83, 116);
+    --color-white: #fff;
+    --greensea_old: rgb(0, 83, 116);
     --greensea: #008289;
-    --orangepet: #feda5f;
-    --orangepet-light: #fef2cb;
+    --orangepet: #fe7c2e;
     --purple-50: #7c3aed;
+    --gray: #9c9c9c;
     --purple-100: #a855f7;
     --purple-base: #51009c;
-    --teste: #dddddd;
+    --dark-100: #000000;
     --gradient: linear-gradient(90deg, var(--purple-50), var(--purple-100));
   
 
@@ -45,16 +45,9 @@
     color: var(--orangepet)
 }
 
-#form-header i {
-    font-size: 1.7rem;
-    position: relative;
-    color: var(--color-white);
-}
-
-
 
 #login-form {
-    background-color: rgba(200, 255, 221, 0.005);
+    background-color: var(--color-white);
     display: flex;
     flex-direction: column;
     padding: 30px 40px;
@@ -84,8 +77,8 @@
 }
 
 .input-box label {
-    font-size: 16px;
-    color: var(--orangepet-light);
+    font-size: 13px;
+    color: var(--gray);
 }
 
 .input-field {
@@ -94,12 +87,12 @@
     gap: 15px;
     padding: 3px;
     cursor: text;
-    border-bottom: 1px solid var(--color-white);
+    border-bottom: 1px solid var(--gray);
 }
 
 .input-field i {
     font-size: 14px;
-    color: var(--orangepet-light);
+    color: var(--gray);
 }
 
 
@@ -108,16 +101,16 @@
    background-color: transparent;
    width: 240px;
    outline: none; 
-   font-size: 20px;
+   font-size: 16px;
    padding: 0px 5px;
-   color: aliceblue;
+   color: var(--gray);
 }
 
 
-#gravar-button {
+#login-button {
     border: none;
-    background: var(--color-white);
-    color: var(--greensea);
+    background: var(--greensea);
+    color: var(--color-white);
     padding: 7px;
     font-size: 17px;
     border-radius: 12px;
@@ -129,7 +122,9 @@
 }
 
 
+
 @media (max-width: 980px)  {
+
 
     #login-form {
       width: 83%;
