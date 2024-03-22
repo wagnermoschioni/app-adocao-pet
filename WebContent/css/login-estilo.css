@@ -91,6 +91,7 @@
 }
 
 .input-field i {
+	display: none;
     font-size: 14px;
     color: var(--gray);
 }

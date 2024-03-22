@@ -11,6 +11,28 @@
 	padding: 0;
 }
 
+.corpo-abrigos {
+  overflow: hidden;
+}
+.slide-in {
+  animation: slideIn 1.6s ease forwards;
+  opacity: 0;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+
+
 body {
 	background-color: var(--greensea);
 }

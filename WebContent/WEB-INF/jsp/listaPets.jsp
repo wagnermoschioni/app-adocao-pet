@@ -76,11 +76,6 @@
 		</main>
 	</c:if>
 
-
-
-
-
-
 	<!-- 
 	<ul>
 		<c:forEach items="${pets}" var="pet">		

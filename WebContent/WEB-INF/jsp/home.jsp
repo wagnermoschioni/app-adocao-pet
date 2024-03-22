@@ -2,6 +2,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Página Inicial</title>
 <link rel="stylesheet" href="css/home-estilo.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -53,6 +54,10 @@
 		</article>
 
 	</main>
+	
+	<footer class="rodape">
+	<p>2024 - Desenvolvido por Wagner Fernandes </p>
+	</footer>
 
 	<script type="module"
 		src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

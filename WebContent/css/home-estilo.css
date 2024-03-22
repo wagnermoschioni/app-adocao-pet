@@ -16,18 +16,22 @@
 /*FORM NOVO PET*/
 
 body {
-	 background-color: var(--greensea);
+	background-color: var(--greensea);
     color: aliceblue;   
     max-width: 1200px;
     margin: 0 auto;
-    padding: 15px;
+    box-sizing: border-box;
+ 	
+    
 }
 
 header {
     display: flex;
     flex-direction: row;
+    height: 11vh;
     justify-content: space-between;
     align-items: center;
+    
 }
 
 
@@ -139,7 +143,7 @@ button {
     width: 75%;
     height: 40px;
     border-radius: 40px;
-    background: var(--orangepet);;
+    background: var(--orangepet);
     border: none;
     cursor: pointer;
     outline: none;
@@ -152,12 +156,25 @@ button {
 /*FINAL FORM NOVO PET*/
 
 
+.rodape {
+	height: 90px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+}
+
+.rodape p {
+	font-size: 11px;
+}
+
 
 @media (max-width: 980px)  {
 
 
 header {
-	padding-top: 35px;
+	padding-top: 25px;
+	height: 8vh;
 }
 
 
@@ -166,9 +183,7 @@ main {
 	flex-direction: column-reverse;
 	align-items: center;
 	justify-content: center;
-	gap: 25px;
-	
-	
+	gap: 15px;	
 }
 
 main aside {
@@ -178,10 +193,9 @@ main aside {
 }
 
 
-
 main article img {
-	width: 145px;
-	height: 145px;
+	width: 135px;
+	height: 135px;
 }
 
 body {
