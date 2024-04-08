@@ -36,6 +36,7 @@
 
 
 	<c:if test="${ not empty pets }">
+	
 		<main class="table">
 			<section class="table_header">
 				<h1>Pets disponíveis</h1>
@@ -73,6 +74,7 @@
 					</tbody>
 				</table>
 			</section>
+			
 		</main>
 	</c:if>
 
