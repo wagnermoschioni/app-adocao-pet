@@ -11,6 +11,8 @@ import br.com.adocao.model.Usuario;
 
 public class UsuarioDAO {
 	
+	public final static String SQL_SELECT = "select * from tb_usuario order by id";
+	
 	private Connection con = null;
 	
 	public List<Usuario> listarUsuarios() {
@@ -18,9 +20,8 @@ public class UsuarioDAO {
 		Conexao conexao = new Conexao();
 		con = conexao.getConexao();
 		List<Usuario> usuarios = new ArrayList<Usuario>();
-		String sql = "SELECT * FROM tb_usuario ORDER BY id";
-
-		try (PreparedStatement pstmt = con.prepareStatement(sql); ResultSet rs = pstmt.executeQuery()) {
+		
+		try (PreparedStatement pstmt = con.prepareStatement(SQL_SELECT); ResultSet rs = pstmt.executeQuery()) {
 
 			while (rs.next()) {
 				Usuario user = new Usuario();

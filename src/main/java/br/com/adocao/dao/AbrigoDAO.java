@@ -11,6 +11,8 @@ import br.com.adocao.model.Abrigo;
 
 public class AbrigoDAO {
 	
+	public final static String SQL_SELECT = "SELECT * FROM tb_abrigo ORDER BY id";
+	
 	private Connection con = null;
 
 	public List<Abrigo> listarAbrigos() {
@@ -19,9 +21,8 @@ public class AbrigoDAO {
 		con = conexao.getConexao();
 		
 		List<Abrigo> abrigos = new ArrayList<Abrigo>();
-		String sql = "SELECT * FROM tb_abrigo ORDER BY id";
-		
-		try (PreparedStatement pstmt = con.prepareStatement(sql); ResultSet rs = pstmt.executeQuery()) {
+				
+		try (PreparedStatement pstmt = con.prepareStatement(SQL_SELECT); ResultSet rs = pstmt.executeQuery()) {
 
 			while (rs.next()) {
 				Abrigo abrigo = new Abrigo();

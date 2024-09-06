@@ -15,7 +15,7 @@
   overflow: hidden;
 }
 .slide-in {
-  animation: slideIn 1.6s ease forwards;
+  animation: slideIn 1.7s ease forwards;
   opacity: 0;
 }
 
